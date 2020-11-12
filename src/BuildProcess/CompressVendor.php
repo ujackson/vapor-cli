@@ -55,7 +55,7 @@ class CompressVendor
      */
     protected function compressOnMac()
     {
-        (new Process(['zip', '-r', $this->buildPath.'/vendor.zip', '.'], $this->vendorPath))->mustRun();
+        (new Process(['zip', '-r', $this->buildPath.'/vendor.zip', '.'], $this->vendorPath, null, null, 300))->mustRun();
     }
 
     /**
